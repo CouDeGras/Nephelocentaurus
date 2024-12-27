@@ -6,32 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nephelocentaurus Config</title>
   <style>
-    @font-face {
+     /* Begin CSS */
+	    @font-face {
       font-family: 'CustomFont';
       src: url('/font.ttf') format('truetype');
       font-weight: normal;
       font-style: normal;
     }
-	  @font-face {
-      font-family: 'GithubCustomFont';
-      src: url('font.ttf') format('truetype');
-      font-weight: normal;
-      font-style: normal;
-    }
-	      @font-face {
-      font-family: 'BoldCustomFont';
-      src: url('/font.ttf') format('truetype');
-      font-weight: normal;
-      font-style: normal;
-    }
-	  @font-face {
-      font-family: 'BoldGithubCustomFont';
-      src: url('font.ttf') format('truetype');
-      font-weight: normal;
-      font-style: normal;
-    }
     :root {
-      --primary-color: #24936E;
+      --primary-color: #e4c1f9;
       --background-color: #080808;
       --surface-color: #1C1C1C;
       --text-color: #E0E0E0;
@@ -40,7 +23,7 @@
     }
 
     body {
-      font-family: 'CustomFont', 'GithubCustomFont','BoldCustomFont', 'BoldGithubCustomFont','Poppins', 'Open Sans', sans-serif;
+      font-family: 'CustomFont','Effra Trial', 'Open Sans', sans-serif;
       margin: 0;
       padding: 0;
       background-color: var(--background-color);
@@ -73,11 +56,11 @@
       margin: 0px;
       font-size: 32px;
       font-weight: 2400;
-		font-family: 'BoldCustomFont', 'BoldGithubCustomFont','Poppins','Open Sans', sans-serif;
+		font-family: 'Effra Trial', sans-serif;
     }
 .location-container {
   border: 1px solid var(--primary-color);
-  border-radius: 12px;
+  border-radius: 16px;
   padding: 20px;
   margin: 20px 0;
   background-color: var(--surface-color);
@@ -92,14 +75,14 @@
 }
 	  #toggleRadioStreams {
   background-color: var(--primary-color);
-  color: white;
+  color: #2C2C2C;
   margin-bottom: 15px;
   float: center;
 		        font-family: inherit;
       padding: 14px 20px;
       margin: 24px 0;
       border: none;
-      border-radius: 8px;
+      border-radius: 16px;
       cursor: pointer;
       font-size: 16px;
       width: 100%;
@@ -121,7 +104,7 @@ h3 {
 }
 
 input[type="text"] {
-  margin: 0 0 2px 0; /* Reduce top margin, keep bottom margin */
+  margin: 0 0 0px 0; /* Reduce top margin, keep bottom margin */
 }
 
 label {
@@ -130,10 +113,10 @@ label {
     input[type="text"] {
       width: 100%;
       padding: 12px 16px;
-      margin: 8px 0;
+      margin: 0 0;
       box-sizing: border-box;
       border: none;
-      border-radius: 8px;
+      border-radius: 16px;
       background-color: var(--input-background);
       color: var(--text-color);
       font-size: 16px;
@@ -146,11 +129,11 @@ label {
 
     input[type="submit"], .dialog-button {
       background-color: var(--primary-color);
-      color: white;
+      color: #2C2C2C;
       padding: 14px 20px;
       margin: 24px 0;
       border: none;
-      border-radius: 8px;
+      border-radius: 16px;
       cursor: pointer;
       font-size: 16px;
       width: 100%;
@@ -161,6 +144,7 @@ label {
 
     input[type="submit"]:hover, .dialog-button:hover {
       background-color: #7C4DFF;
+		color: white;
     }
 .header-bar {
   background-color: #1C1C1C;
@@ -193,9 +177,9 @@ label {
     .info-box {
       background-color: var(--surface-color);
       border-left: 4px solid var(--primary-color);
-      padding: 16px;
-      margin: 16px 0;
-      border-radius: 8px;
+      padding: 12px;
+      margin: 4px 0;
+      border-radius: 16px;
       text-align: center;
     }
 
@@ -238,7 +222,7 @@ label {
     .dialog-content {
       background-color: var(--surface-color);
       padding: 24px;
-      border-radius: 12px;
+      border-radius: 16px;
       text-align: center;
       max-width: 80%;
     }
@@ -248,6 +232,328 @@ label {
         max-width: 640px;
       }
     }
+    input[type="range"] {
+      -webkit-appearance: none;
+      width: 100%;
+      height: 8px;
+      margin: 8px 0;
+      background: var(--surface-color, #2C2C2C);
+      border-radius: 16px;
+      outline: none;
+      opacity: 0.8;
+      transition: opacity 0.2s;
+      position: relative;
+    }
+
+    input[type="range"]:hover {
+      opacity: 1;
+    }
+
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 20px;
+      height: 20px;
+      background: var(--primary-color, #);
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    input[type="range"]::-webkit-slider-thumb:hover {
+      background-color: #7C4DFF;
+    }
+
+    input[type="range"]::-moz-range-thumb {
+      width: 20px;
+      height: 20px;
+      background: var(--primary-color, #);
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    input[type="range"]::-moz-range-thumb:hover {
+      background-color: #7C4DFF;
+    }
+
+    input[type="range"]::-ms-thumb {
+      width: 20px;
+      height: 20px;
+      background: var(--primary-color, #);
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    input[type="range"]::-ms-thumb:hover {
+      background-color: #7C4DFF;
+    }
+
+    .range-wrapper {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+    }
+
+    .range-value {
+      position: absolute;
+      top: -25px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #e4c1f9;
+      color: #2C2C2C;
+      font-size: 14px;
+      font-weight: bold;
+      padding: 2px 6px;
+      border-radius: 5px;
+      pointer-events: none;
+      transition: left 0.2s, top 0.2s;
+    }
+
+    .range-wrapper input[type="range"] {
+      position: relative;
+      z-index: 1;
+    }
+	  
+	  .row-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.row-container .field {
+  flex: 1;
+}
+
+.row-container .field:first-child {
+  flex-basis: var(--layout-percentage, 50%);
+}
+
+.row-container .field:last-child {
+  flex-basis: calc(100% - var(--layout-percentage, 50%));
+}
+
+.row-container input[type="text"] {
+  width: 100%;
+  box-sizing: border-box;
+}
+.box-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.outlined-box {
+  flex: 1 1 calc(50% - 8px); /* Two boxes side by side */
+  border: 1px solid var(--primary-color);
+  border-radius: 8px;
+  padding: 16px;
+  background-color: var(--surface-color);
+  color: var(--text-color);
+}
+
+.outlined-box h3 {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+.row-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 10px;
+}
+
+.row-container .field {
+  flex: 1;
+}
+
+.row-container input[type="text"] {
+  width: 100%;
+  padding: 8px 12px;
+  margin-top: 4px;
+  box-sizing: border-box;
+  border: 1px solid var(--secondary-text-color);
+  border-radius: 4px;
+  background-color: var(--input-background);
+  color: var(--text-color);
+}
+
+.row-container input::placeholder {
+  color: var(--secondary-text-color);
+}
+.field-container {
+  display: flex;
+  flex-direction: row;
+  gap: 16px; /* Space between the two outlined boxes */
+  margin-top: 10px;
+}
+
+.outlined-field {
+  flex: 1;
+  border: 1px solid var(--primary-color);
+  border-radius: 8px;
+  padding: 12px;
+  background-color: var(--surface-color);
+  color: var(--text-color);
+}
+
+.outlined-field label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.outlined-field input[type="text"] {
+  width: 100%;
+  padding: 8px 12px;
+  box-sizing: border-box;
+  border: 1px solid var(--secondary-text-color);
+  border-radius: 4px;
+  background-color: var(--input-background);
+  color: var(--text-color);
+}
+
+.outlined-field input::placeholder {
+  color: var(--secondary-text-color);
+}
+.field-container {
+  display: flex;
+  flex-direction: row;
+  gap: 16px; /* Space between the two outlined boxes */
+  margin-top: 10px;
+}
+
+.outlined-field {
+  flex: 1;
+  border: 1px solid var(--primary-color);
+  border-radius: 16px;
+  padding: 12px;
+  background-color: var(--surface-color);
+  color: var(--text-color);
+  margin: 0px; /* Adds a bit of space around the outline */
+}
+
+.outlined-field label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.outlined-field input[type="text"] {
+  width: 100%;
+  padding: 8px 12px;
+  box-sizing: border-box;
+  border: 0px solid var(--secondary-text-color);
+  border-radius: 16px;
+  background-color: var(--input-background);
+  color: var(--text-color);
+}
+
+.outlined-field input::placeholder {
+  color: var(--secondary-text-color);
+}
+	  .header-bar h3{
+  margin: 0; /* Removes any margin above and below the title */
+margin-left: 0px; /* Removes any margin above and below the title */
+  padding: 0; /* Ensures no padding is added */
+}
+.outlined-field h3 {
+  margin: 0; /* Removes any margin above and below the title */
+margin-left: 4px; /* Removes any margin above and below the title */
+  padding: 0; /* Ensures no padding is added */
+}
+	  input[type="range"] {
+  -webkit-appearance: none; /* Remove default styling for WebKit browsers */
+  appearance: none; /* Remove default styling for other browsers */
+  width: 100%;
+  height: 8px; /* Adjust the height of the slider track */
+  margin: 8px 0;
+  background: #ccc; /* Gray color for the track */
+  border-radius: 16px; /* Make the track edges rounded */
+  outline: none;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+  position: relative;
+}
+
+input[type="range"]:hover {
+  opacity: 1;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8px;
+  background: #2c2c2c; /* Gray color for the track */
+  border-radius: 16px;
+}
+
+input[type="range"]::-moz-range-track {
+  width: 100%;
+  height: 8px;
+  background: #2c2c2c; /* Gray color for the track */
+  border-radius: 16px;
+}
+
+input[type="range"]::-ms-track {
+  width: 100%;
+  height: 8px;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+input[type="range"]::-ms-fill-lower {
+  background: #2c2c2c; /* Gray color for the lower part of the track */
+  border-radius: 16px;
+}
+
+input[type="range"]::-ms-fill-upper {
+  background: #2c2c2c; /* Gray color for the upper part of the track */
+  border-radius: 16px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: var(--primary-color); /* Use your preferred thumb color */
+  border-radius: 50%; /* Make it circular */
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  background-color: #7C4DFF; /* Highlight color on hover */
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: var(--primary-color); /* Use your preferred thumb color */
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+input[type="range"]::-ms-thumb {
+  width: 20px;
+  height: 20px;
+  background: var(--primary-color); /* Use your preferred thumb color */
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
   </style>
 </head>
 
